@@ -5,6 +5,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/UI/card";
+
+import Dropdown, { DropDownItem } from "@/components/UI/Dropdown";
+
 import {
   BarChart3,
   Brain,
@@ -112,7 +115,11 @@ function LandingPage() {
             </div>
             <div className="hidden md:block">
               <img
+
+                src="/heroImage.avif"
+
                 src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+
                 alt="Business Analytics Dashboard"
                 className="rounded-lg shadow-2xl"
               />
@@ -143,14 +150,25 @@ function LandingPage() {
 
       {/* Industries Section */}
       <section className="Jndustries py-20 bg-gradient-to-b from-white/50 via-blue-50/30 to-blue-100/50 relative overflow-hidden">
+
+        <div className="absolute inset-0 bg-[url('/industryImage.avif')] bg-cover bg-center opacity-5"></div>
+
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-5"></div>
+
         <div className="container mx-auto px-6 relative">
           <h2 className="text-3xl font-bold text-center mb-16">
             Industries We Serve
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {industries.map((industry, index) => (
+
+              <Card
+                key={index}
+                className="bg-white/10 backdrop-blur-sm border-2 border-white/50 border-r-white/20 border-b-white/20"
+              >
+
               <Card key={index} className="bg-white/10 backdrop-blur-sm border-2 border-white/50 border-r-white/20 border-b-white/20">
+
                 <CardHeader>
                   <div className="icon my-2">{industry.icon}</div>
                   <CardTitle>{industry.title}</CardTitle>
@@ -165,6 +183,24 @@ function LandingPage() {
       </section>
       <section className="py-20 bg-gradient-to-b from-blue-100/50 via-blue-50/30 to-white relative overflow-hidden">
         <div className="container mx-auto px-6 relative">
+
+          <Card
+            className="bg-white/10 backdrop-blur-sm p-8 text-center max-w-4xl mx-auto border-2 border-white/50 border-r-white/20 border-b-white/20"
+            style={{ boxShadow: "0 25px 45px rbga(0, 0, 0, 0.2)" }}
+          >
+            <div className="text-primary mb-6">
+              <Quote className="inline fill-primary -scale-x-100" size={46} />
+            </div>
+            <CardTitle className="mb-6 text-2xl">
+              LEDGRBOOK revolutionized how we manage inventory and finances. Our
+              productivity jumped 40% in 3 months!
+            </CardTitle>
+            <CardContent className="text-gray-500">
+              <p className="font-semibold text-lg">Sarah Chen</p>
+              <p>CEO of TechGrowth Solutions</p>
+            </CardContent>
+          </Card>
+
             <Card className="bg-white/10 backdrop-blur-sm p-8 text-center max-w-4xl mx-auto border-2 border-white/50 border-r-white/20 border-b-white/20" style={{boxShadow: '0 25px 45px rbga(0, 0, 0, 0.2)'}}>
               <div className="text-primary mb-6"><Quote className="inline fill-primary -scale-x-100" size={46}/></div>
               <CardTitle className="mb-6 text-2xl">
@@ -176,6 +212,7 @@ function LandingPage() {
                   <p>CEO of TechGrowth Solutions</p>
               </CardContent>
             </Card>
+
         </div>
       </section>
 
