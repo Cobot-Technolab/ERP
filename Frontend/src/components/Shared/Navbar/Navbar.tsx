@@ -18,9 +18,10 @@ import {
   Truck,
   WalletCards,
 } from "lucide-react";
-import { Button } from "../UI/button";
+import { Button } from "@/components/UI/button";
 import { Link } from "react-router-dom";
-import Dropdown, { DropDownItem } from "../UI/Dropdown";
+import Dropdown, { DropDownItem } from "@/components/UI/Dropdown";
+import LanguageSelector from "./LanguageSelector";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showDropDown, setShowDropDown] = useState<{ [key: string]: boolean }>({
@@ -182,10 +183,10 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
-              <img src="/ledgrbookLogo.png" alt="LEDGRBOOK" className="h-36" />
+              <img src="/ledgrbookLogo.png" alt="LEDGRBOOK" className="xsm:h-36 h-32" />
             </Link>
           </div>
-
+          <LanguageSelector className="hidden xsm:block lg:hidden" />
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8">
             {menuInfo.map((menu, index) => {
@@ -277,17 +278,18 @@ const Navbar = () => {
               );
             })}
           </div>
-          <div className="authLinks hidden lg:block">
-            <Button variant={"default"} className="text-md w-24 mr-4 py-5">
-              Signup
-            </Button>
-            <Button variant={"outline"} className="text-md w-24 py-5">
+          <div className="rightSideLinks hidden lg:flex items-center gap-2">
+            <LanguageSelector />
+            <Button variant={"outline"} className="text-md min-w-24 py-5">
               Login
+            </Button>
+            <Button variant={"default"} className="text-md min-w-24 py-[22px] ">
+              Get Started
             </Button>
           </div>
         </div>
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-primary hover:text-blue-200 transition-colors"
@@ -314,6 +316,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="lg:hidden bg-background py-4 max-w-md mx-auto border-t border-white/20">
+          <LanguageSelector className="block xsm:hidden" />
           {menuInfo.map((menu, index) => {
             return !menu.subMenu ? (
               <Link
@@ -354,11 +357,11 @@ const Navbar = () => {
             );
           })}
           <div className="authLinks px-3 flex flex-wrap gap-4 mt-2">
-            <Button variant={"default"} className="text-md w-24 py-5">
-              Signup
-            </Button>
             <Button variant={"outline"} className="text-md w-24 py-5">
               Login
+            </Button>
+            <Button variant={"default"} className="text-md w-24 py-[22px]">
+              Signup
             </Button>
           </div>
         </div>

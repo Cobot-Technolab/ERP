@@ -1,17 +1,12 @@
-import Footer from "./components/Shared/Footer";
-import Navbar from "./components/Shared/Navbar";
-import LandingPage from "./Pages/LandingPage";
+import Footer from "@/components/Shared/Footer";
+import Navbar from "@/components/Shared/Navbar/Navbar";
+import LandingPage from "@/Pages/LandingPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import {store} from './store/store';
+import { store } from "@/store/store";
 import { Provider } from "react-redux";
 function App() {
   return (
     <Provider store={store}>
-=======
-function App() {
-  return (
-    <>
-
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -20,9 +15,6 @@ function App() {
         <Footer />
       </BrowserRouter>
     </Provider>
-=======
-    </>
-
   );
 }
 
