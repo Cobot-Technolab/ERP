@@ -46,14 +46,6 @@ const Navbar = () => {
           link: "/",
         },
         {
-
-
-          title: "Customer Relation Management (CRM)",
-          icon: <Heart className="w-6 h-6" />,
-          link: "/",
-        },
-        {
-
           title: "Human Resource Management (HRM)",
           icon: <Brain className="w-6 h-6" />,
           link: "/",
@@ -75,14 +67,6 @@ const Navbar = () => {
           link: "/",
         },
         {
-
-
-          title: "Smart Customer support",
-          icon: <MessageCircle className="w-6 h-6" />,
-          link: "/",
-        },
-        {
-
           title: "AI assistant for business queries",
           icon: <BotMessageSquare className="w-6 h-6" />,
           link: "/",
@@ -123,32 +107,6 @@ const Navbar = () => {
           link: "/",
         },
         {
-
-
-          title: "Forecasting",
-          icon: <TrendingUpDown className="w-6 h-6" />,
-          link: "/",
-        },
-        {
-
-          title: "Automated billing & recurring payment",
-          icon: <HandCoins className="w-6 h-6" />,
-          link: "/",
-        },
-        {
-
-
-          title: "Payment reminder",
-          icon: <Calendar className="w-6 h-6" />,
-          link: "/",
-        },
-        {
-          title: "Data exports",
-          icon: <Database className="w-6 h-6" />,
-          link: "/",
-        },
-        {
-
           title: "Notification & Alerts",
           icon: <Bell className="w-6 h-6" />,
           link: "/",
