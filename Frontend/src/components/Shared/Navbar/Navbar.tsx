@@ -46,7 +46,6 @@ const Navbar = () => {
           link: "/",
         },
         {
-
           title: "Human Resource Management (HRM)",
           icon: <Brain className="w-6 h-6" />,
           link: "/",
