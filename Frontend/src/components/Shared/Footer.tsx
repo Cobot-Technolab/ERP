@@ -10,7 +10,7 @@ const Footer = () => {
             <Link to="#" className="hover:text-white">Terms of Service</Link>
             <a href="#" className="hover:text-white">Contact</a>
           </div>
-          <p>© LEDGRBOOK {new Date().getFullYear()}</p>
+          <p>© {new Date().getFullYear()} Cobot Technolab. All Right Reserved </p>
         </div>
       </div>
     </footer>
