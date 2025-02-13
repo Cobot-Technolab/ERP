@@ -6,15 +6,12 @@ import {
   Brain,
   Calendar,
   ChevronDown,
-  Database,
   Edit,
   HandCoins,
   HardHat,
-  Heart,
   MessageCircle,
   QrCode,
   ShoppingBag,
-  TrendingUpDown,
   Truck,
   WalletCards,
 } from "lucide-react";
@@ -153,7 +150,11 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
-              <img src="/ledgrbookLogo.png" alt="LEDGRBOOK" className="xsm:h-36 h-32" />
+              <img
+                src="/ledgrbookLogo.png"
+                alt="LEDGRBOOK"
+                className="xsm:h-36 h-32"
+              />
             </Link>
           </div>
           <LanguageSelector className="hidden xsm:block lg:hidden" />
@@ -250,12 +251,19 @@ const Navbar = () => {
           </div>
           <div className="rightSideLinks hidden lg:flex items-center gap-2">
             <LanguageSelector />
-            <Button variant={"outline"} className="text-md min-w-24 py-5">
-              Login
-            </Button>
-            <Button variant={"default"} className="text-md min-w-24 py-[22px] ">
-              Get Started
-            </Button>
+            <Link to={"/login"}>
+              <Button variant={"outline"} className="text-md min-w-24 py-5">
+                Login
+              </Button>
+            </Link>
+            <Link to={"/signup"}>
+              <Button
+                variant={"default"}
+                className="text-md min-w-24 py-[22px] "
+              >
+                Get Started
+              </Button>
+            </Link>
           </div>
         </div>
         {/* Mobile Menu Button */}
@@ -327,12 +335,16 @@ const Navbar = () => {
             );
           })}
           <div className="authLinks px-3 flex flex-wrap gap-4 mt-2">
-            <Button variant={"outline"} className="text-md w-24 py-5">
-              Login
-            </Button>
-            <Button variant={"default"} className="text-md w-24 py-[22px]">
-              Signup
-            </Button>
+            <Link to={"/login"}>
+              <Button variant={"outline"} className="text-md w-24 py-5">
+                Login
+              </Button>
+            </Link>
+            <Link to={"/signup"}>
+              <Button variant={"default"} className="text-md w-24 py-[22px]">
+                Signup
+              </Button>
+            </Link>
           </div>
         </div>
       )}

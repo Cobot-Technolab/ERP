@@ -20,6 +20,8 @@ import {
   Truck,
   Workflow,
 } from "lucide-react";
+import HeroImage from "@/assets/heroImage.avif";
+import IndustryImage from "@/assets/industryImage.avif";
 function LandingPage() {
   const features = [
     {
@@ -94,7 +96,7 @@ function LandingPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="Hero relative bg-primary text-white pt-20">
+      <section className="Hero relative bg-primary text-white">
         <div className="container mx-auto px-6 py-24">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -112,7 +114,7 @@ function LandingPage() {
             </div>
             <div className="hidden md:block">
               <img
-                src="/heroImage.avif"
+                src={HeroImage}
                 alt="Business Analytics Dashboard"
                 className="rounded-lg shadow-2xl"
               />
@@ -143,7 +145,7 @@ function LandingPage() {
 
       {/* Industries Section */}
       <section className="Jndustries py-20 bg-gradient-to-b from-white/50 via-blue-50/30 to-blue-100/50 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/industryImage.avif')] bg-cover bg-center opacity-5"></div>
+        <div className={`absolute inset-0 bg-cover bg-center opacity-5`} style={{backgroundImage: `url(${IndustryImage})`}}></div>
         <div className="container mx-auto px-6 relative">
           <h2 className="text-3xl font-bold text-center mb-16">
             Industries We Serve
