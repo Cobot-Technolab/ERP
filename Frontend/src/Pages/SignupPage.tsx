@@ -5,7 +5,6 @@ import {
 } from "@/lib/validateForm";
 import { FormErrors } from "@/types";
 import FormInput from "@/components/UI/FormInput";
-import SocialAuth from "@/components/UI/SocialAuth";
 import { User, Mail, Phone, Lock } from "lucide-react";
 import BusinessGrowth from "@/assets/BusinessGrowth.svg";
 const SignupPage = () => {
@@ -57,7 +56,7 @@ const SignupPage = () => {
   };
 
   return (
-    <div className="bg-gray-100 flex justify-evenly p-4 py-8">
+    <div className="bg-gray-100 flex justify-evenly p-4 py-16">
       <div className="hidden flex-col justify-center h-full text-black p-8 lg:flex">
         <div className="space-y-6 max-w-lg">
           {/* Main heading */}
@@ -77,9 +76,9 @@ const SignupPage = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-lg h-fit pb-10">
+      <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-lg h-fit py-12">
         <div className="text-center">
-          <h2 className="mt-6 text-3xl font-bold text-foreground">
+          <h2 className="text-3xl font-bold text-foreground">
             Create an Account
           </h2>
           <p className="mt-2 text-sm text-gray-600">
@@ -92,7 +91,6 @@ const SignupPage = () => {
             </Link>
           </p>
         </div>
-        <SocialAuth position="top" continueText="register" />
         <form className="!mt-4 space-y-6" onSubmit={handleSubmit}>
           <div className="space-y-4">
             <FormInput

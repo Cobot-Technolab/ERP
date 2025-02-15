@@ -163,6 +163,7 @@ const Navbar = () => {
             {menuInfo.map((menu, index) => {
               return !menu.subMenu ? (
                 <Link
+                  key={`menu-${index}`}
                   to="/"
                   className="group relative py-2 text-primary transition-colors"
                 >
@@ -256,12 +257,12 @@ const Navbar = () => {
                 Login
               </Button>
             </Link>
-            <Link to={"/signup"}>
+            <Link to={"/demo-form"}>
               <Button
                 variant={"default"}
                 className="text-md min-w-24 py-[22px] "
               >
-                Get Started
+                Demo
               </Button>
             </Link>
           </div>
@@ -298,6 +299,8 @@ const Navbar = () => {
           {menuInfo.map((menu, index) => {
             return !menu.subMenu ? (
               <Link
+                onClick={() => setIsOpen(false)}
+                key={`menu-${index}`}
                 to="/"
                 className="block px-3 py-2 text-primary hover:bg-white/10 rounded-lg"
               >
@@ -322,6 +325,7 @@ const Navbar = () => {
                   <div className="pl-4 max-h-64 overflow-auto">
                     {menu.subMenu.map((subMenu, index) => (
                       <Link
+                        onClick={() => setIsOpen(false)}
                         key={index}
                         to={subMenu.link}
                         className="block px-3 py-2 text-primary hover:bg-white/10 rounded-lg"
@@ -335,14 +339,14 @@ const Navbar = () => {
             );
           })}
           <div className="authLinks px-3 flex flex-wrap gap-4 mt-2">
-            <Link to={"/login"}>
+            <Link to={"/login"} onClick={() => setIsOpen(false)}>
               <Button variant={"outline"} className="text-md w-24 py-5">
                 Login
               </Button>
             </Link>
-            <Link to={"/signup"}>
+            <Link to={"/demo-form"} onClick={() => setIsOpen(false)}>
               <Button variant={"default"} className="text-md w-24 py-[22px]">
-                Signup
+                Demo
               </Button>
             </Link>
           </div>

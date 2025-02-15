@@ -4,7 +4,6 @@ import { Mail, Lock } from "lucide-react";
 import { validateEmail, validatePassword } from "@/lib/validateForm";
 import { FormErrors } from "@/types";
 import FormInput from "@/components/UI/FormInput";
-import SocialAuth from "@/components/UI/SocialAuth";
 import { Button } from "@/components/UI/button";
 const LoginPage = () => {
   const [formData, setFormData] = useState({
@@ -94,7 +93,7 @@ const LoginPage = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-lg pb-10 h-fit">
+      <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-lg pb-20 pt-12 h-fit">
         <div className="text-center">
           <h2 className="mt-6 text-3xl font-bold text-foreground">
             Welcome Back
@@ -157,7 +156,6 @@ const LoginPage = () => {
             </Link>
           </div>
         </form>
-        <SocialAuth />
       </div>
     </div>
   );
